@@ -10,12 +10,31 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class ShamindaActivity extends AppCompatActivity {
     private EditText editTextUsername;
     private EditText editTextPassword;
     private Button buttonConfirm;
 
+    public void login(View v){
+        if(editTextUsername.getText().toString().equals("shaminda") && editTextPassword.getText().toString().equals("301056885")){
+
+            Toast.makeText(ShamindaActivity.this, editTextUsername.getText(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(ShamindaActivity.this, editTextPassword.getText(), Toast.LENGTH_SHORT).show();
+            buttonConfirm.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intentLocalNewActivity = new Intent (ShamindaActivity.this, AbeysekaraActivity.class);
+                    startActivity(intentLocalNewActivity);
+
+                }
+            });
+
+        }else{
+            Toast.makeText(ShamindaActivity.this, "wrong entry", Toast.LENGTH_SHORT).show();
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,14 +47,6 @@ public class ShamindaActivity extends AppCompatActivity {
 
         editTextUsername.addTextChangedListener(loginTextWatcher);
         editTextPassword.addTextChangedListener(loginTextWatcher);
-
-        buttonConfirm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intentLocalNewActivity = new Intent (ShamindaActivity.this, AbeysekaraActivity.class);
-                startActivity(intentLocalNewActivity);
-            }
-        });
 
     }
 
