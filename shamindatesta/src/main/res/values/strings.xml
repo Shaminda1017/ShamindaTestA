@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">ShamindaTestA</string>
+    <string name="app_name">Shaminda Abeysekara S301056885</string>
+    <string name="shaminda_abeysekara_301056885">Shaminda Abeysekara 301056885</string>
+    <string name="todo">TODO</string>
+    <string name="shaminda_sign_in">Shaminda Sign In</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="shaminda">Shaminda</string>
+    <string name="Abeysekara">Abeysekara</string>
 </resources>
